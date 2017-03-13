@@ -1,0 +1,253 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+input CompanyInput {
+  _id: ID
+  name: String
+  token: String
+  email: String
+  password: String
+}
+
+type CompanyType {
+  _id: ID
+  name: String
+  token: String
+  email: String
+}
+
+type CreateCompanyResponse {
+  company: CompanyType
+  errors: [UserErrorType]
+}
+
+type CreateDriverResponse {
+  driver: DriverType
+  errors: [UserErrorType]
+}
+
+type CreateManagerResponse {
+  manager: ManagerType
+  errors: [UserErrorType]
+}
+
+type CreateOwnerResponse {
+  owner: OwnerType
+  errors: [UserErrorType]
+}
+
+type CreateStationResponse {
+  station: StationType
+  errors: [UserErrorType]
+}
+
+type DeleteCompanyResponse {
+  company: CompanyType
+  errors: [UserErrorType]
+}
+
+type DeleteDriverResponse {
+  driver: DriverType
+  errors: [UserErrorType]
+}
+
+type DeleteManagerResponse {
+  manager: ManagerType
+  errors: [UserErrorType]
+}
+
+type DeleteOwnerResponse {
+  owner: OwnerType
+  errors: [UserErrorType]
+}
+
+type DeleteStationResponse {
+  station: StationType
+  errors: [UserErrorType]
+}
+
+input DriverInput {
+  _id: ID
+  email: String
+  password: String
+  phoneNumber: String
+  firstName: String
+  lastName: String
+  companyId: ID
+}
+
+type DriverType {
+  _id: ID
+  email: String
+  phoneNumber: String
+  firstName: String
+  lastName: String
+  company: CompanyType
+}
+
+input ManagerInput {
+  _id: ID
+  email: String
+  password: String
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  company: String
+  companyId: ID
+}
+
+type ManagerType {
+  _id: ID
+  email: String
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  company: String
+  companyId: ID
+}
+
+type Mutation {
+  createCompany(input: CompanyInput): CreateCompanyResponse
+  updateCompany(input: CompanyInput): UpdateCompanyResponse
+  deleteCompany(id: ID): DeleteCompanyResponse
+  createManager(input: ManagerInput): CreateManagerResponse
+  updateManager(input: ManagerInput): UpdateManagerResponse
+  deleteManager(id: ID): DeleteManagerResponse
+  createDriver(input: DriverInput): CreateDriverResponse
+  updateDriver(input: DriverInput): UpdateDriverResponse
+  deleteDriver(id: ID): DeleteDriverResponse
+  createStation(input: StationInput): CreateStationResponse
+  updateStation(input: StationInput): UpdateStationResponse
+  deleteStation(id: ID): DeleteStationResponse
+  createOwner(input: OwnerInput): CreateOwnerResponse
+  updateOwner(input: OwnerInput): UpdateOwnerResponse
+  deleteOwner(id: ID): DeleteOwnerResponse
+}
+
+input OwnerInput {
+  _id: ID
+  email: String
+  password: String
+  firstName: String
+  lastName: String
+  address: String
+  paymentAmount: Float
+}
+
+type OwnerType {
+  _id: ID
+  email: String
+  firstName: String
+  lastName: String
+  address: String
+  paymentAmount: Float
+  stations: [StationType]
+}
+
+input ProductInput {
+  pumpId: Int
+  name: String
+  price: Float
+  updatedAt: String
+}
+
+type ProductType {
+  pumpId: Int
+  name: String
+  price: Float
+  updatedAt: String
+}
+
+type Query {
+  root: Root
+  company(_id: ID): CompanyType
+  companies: [CompanyType]
+  manager(_id: ID): ManagerType
+  managers: [ManagerType]
+  driver(_id: ID): DriverType
+  drivers: [DriverType]
+  owner(_id: ID): OwnerType
+  owners: [OwnerType]
+  station(_id: ID): StationType
+  stations: [StationType]
+}
+
+type Root {
+  greetings: String
+}
+
+input StationInput {
+  _id: ID
+  ownerId: ID
+  geohash: String
+  products: [ProductInput]
+  currency: String
+  phoneNumber: String
+  address: String
+  lat: Float
+  lng: Float
+  brand: String
+  updatedAt: String
+  fullAddress: String
+  zipline: ZiplineInput
+  pumpIds: [Int]
+  readyForSale: Boolean
+}
+
+type StationType {
+  _id: ID
+  ownerId: ID
+  geohash: String
+  products: [ProductType]
+  currency: String
+  phoneNumber: String
+  address: String
+  lat: Float
+  lng: Float
+  brand: String
+  updatedAt: String
+  fullAddress: String
+  zipline: ZiplineType
+  pumpIds: [Int]
+  readyForSale: Boolean
+}
+
+type UpdateCompanyResponse {
+  company: CompanyType
+  errors: [UserErrorType]
+}
+
+type UpdateDriverResponse {
+  driver: DriverType
+  errors: [UserErrorType]
+}
+
+type UpdateManagerResponse {
+  manager: ManagerType
+  errors: [UserErrorType]
+}
+
+type UpdateOwnerResponse {
+  owner: OwnerType
+  errors: [UserErrorType]
+}
+
+type UpdateStationResponse {
+  station: StationType
+  errors: [UserErrorType]
+}
+
+type UserErrorType {
+  key: String
+  msg: String
+}
+
+input ZiplineInput {
+  storeId: Int
+}
+
+type ZiplineType {
+  storeId: Int
+}
