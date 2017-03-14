@@ -9,6 +9,7 @@ import {
   Row,
   Col,
   Form,
+  Table,
   FormControl 
 } from '@sketchpixy/rubix'
 
@@ -19,7 +20,29 @@ class Companies extends React.Component {
 
   render() {
     let companies = this.props.companies.companies
-    console.log(companies)
+
+    let rows = companies.map((company, index) => {
+      return (
+        <tr>
+          <td>{index + 1}</td>
+          <td>{company.name}</td>
+          <td>{company.email}</td>
+        </tr>
+      )
+    })
+
+    let table = (
+      <Table responsive>
+        <thead>
+          <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </Table>
+    )
 
     return (
       <PanelContainer>
@@ -29,6 +52,7 @@ class Companies extends React.Component {
               <Row>
                 <Col xs={12}>
                   <h3>Companies Page</h3>
+                  {table}
                 </Col>
               </Row>
             </Grid>
