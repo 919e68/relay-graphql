@@ -3,6 +3,13 @@ schema {
   mutation: Mutation
 }
 
+type Company {
+  _id: ID
+  name: String
+  token: String
+  email: String
+}
+
 input CompanyInput {
   _id: ID
   name: String
@@ -11,61 +18,63 @@ input CompanyInput {
   password: String
 }
 
-type CompanyType {
-  _id: ID
-  name: String
-  token: String
-  email: String
-}
-
 type CreateCompanyResponse {
-  company: CompanyType
-  errors: [UserErrorType]
+  company: Company
+  errors: [UserError]
 }
 
 type CreateDriverResponse {
-  driver: DriverType
-  errors: [UserErrorType]
+  driver: Driver
+  errors: [UserError]
 }
 
 type CreateManagerResponse {
-  manager: ManagerType
-  errors: [UserErrorType]
+  manager: Manager
+  errors: [UserError]
 }
 
 type CreateOwnerResponse {
-  owner: OwnerType
-  errors: [UserErrorType]
+  owner: Owner
+  errors: [UserError]
 }
 
 type CreateStationResponse {
-  station: StationType
-  errors: [UserErrorType]
+  station: Station
+  errors: [UserError]
 }
 
 type DeleteCompanyResponse {
-  company: CompanyType
-  errors: [UserErrorType]
+  company: Company
+  errors: [UserError]
 }
 
 type DeleteDriverResponse {
-  driver: DriverType
-  errors: [UserErrorType]
+  driver: Driver
+  errors: [UserError]
 }
 
 type DeleteManagerResponse {
-  manager: ManagerType
-  errors: [UserErrorType]
+  manager: Manager
+  errors: [UserError]
 }
 
 type DeleteOwnerResponse {
-  owner: OwnerType
-  errors: [UserErrorType]
+  owner: Owner
+  errors: [UserError]
 }
 
 type DeleteStationResponse {
-  station: StationType
-  errors: [UserErrorType]
+  station: Station
+  errors: [UserError]
+}
+
+type Driver {
+  _id: ID
+  email: String
+  phoneNumber: String
+  firstName: String
+  lastName: String
+  company: Company
 }
 
 input DriverInput {
@@ -78,19 +87,9 @@ input DriverInput {
   companyId: ID
 }
 
-type DriverType {
+type Manager {
   _id: ID
   email: String
-  phoneNumber: String
-  firstName: String
-  lastName: String
-  company: CompanyType
-}
-
-input ManagerInput {
-  _id: ID
-  email: String
-  password: String
   firstName: String
   lastName: String
   phoneNumber: String
@@ -98,9 +97,10 @@ input ManagerInput {
   companyId: ID
 }
 
-type ManagerType {
+input ManagerInput {
   _id: ID
   email: String
+  password: String
   firstName: String
   lastName: String
   phoneNumber: String
@@ -126,6 +126,16 @@ type Mutation {
   deleteOwner(id: ID): DeleteOwnerResponse
 }
 
+type Owner {
+  _id: ID
+  email: String
+  firstName: String
+  lastName: String
+  address: String
+  paymentAmount: Float
+  stations: [Station]
+}
+
 input OwnerInput {
   _id: ID
   email: String
@@ -136,14 +146,11 @@ input OwnerInput {
   paymentAmount: Float
 }
 
-type OwnerType {
-  _id: ID
-  email: String
-  firstName: String
-  lastName: String
-  address: String
-  paymentAmount: Float
-  stations: [StationType]
+type Product {
+  pumpId: Int
+  name: String
+  price: Float
+  updatedAt: String
 }
 
 input ProductInput {
@@ -153,25 +160,36 @@ input ProductInput {
   updatedAt: String
 }
 
-type ProductType {
-  pumpId: Int
-  name: String
-  price: Float
-  updatedAt: String
-}
-
 type Query {
   root: Root
-  company(_id: ID): CompanyType
-  manager(_id: ID): ManagerType
-  driver(_id: ID): DriverType
-  owner(_id: ID): OwnerType
-  station(_id: ID): StationType
+  company(_id: ID): Company
+  manager(_id: ID): Manager
+  driver(_id: ID): Driver
+  owner(_id: ID): Owner
+  station(_id: ID): Station
   viewer: Viewer
 }
 
 type Root {
   greetings: String
+}
+
+type Station {
+  _id: ID
+  ownerId: ID
+  geohash: String
+  products: [Product]
+  currency: String
+  phoneNumber: String
+  address: String
+  lat: Float
+  lng: Float
+  brand: String
+  updatedAt: String
+  fullAddress: String
+  zipline: Zipline
+  pumpIds: [Int]
+  readyForSale: Boolean
 }
 
 input StationInput {
@@ -192,67 +210,49 @@ input StationInput {
   readyForSale: Boolean
 }
 
-type StationType {
-  _id: ID
-  ownerId: ID
-  geohash: String
-  products: [ProductType]
-  currency: String
-  phoneNumber: String
-  address: String
-  lat: Float
-  lng: Float
-  brand: String
-  updatedAt: String
-  fullAddress: String
-  zipline: ZiplineType
-  pumpIds: [Int]
-  readyForSale: Boolean
-}
-
 type UpdateCompanyResponse {
-  company: CompanyType
-  errors: [UserErrorType]
+  company: Company
+  errors: [UserError]
 }
 
 type UpdateDriverResponse {
-  driver: DriverType
-  errors: [UserErrorType]
+  driver: Driver
+  errors: [UserError]
 }
 
 type UpdateManagerResponse {
-  manager: ManagerType
-  errors: [UserErrorType]
+  manager: Manager
+  errors: [UserError]
 }
 
 type UpdateOwnerResponse {
-  owner: OwnerType
-  errors: [UserErrorType]
+  owner: Owner
+  errors: [UserError]
 }
 
 type UpdateStationResponse {
-  station: StationType
-  errors: [UserErrorType]
+  station: Station
+  errors: [UserError]
 }
 
-type UserErrorType {
+type UserError {
   key: String
   msg: String
 }
 
 type Viewer {
   name: String
-  companies: [CompanyType]
-  managers: [ManagerType]
-  drivers: [DriverType]
-  owners: [OwnerType]
-  stations: [StationType]
+  companies: [Company]
+  managers: [Manager]
+  drivers: [Driver]
+  owners: [Owner]
+  stations: [Station]
 }
 
-input ZiplineInput {
+type Zipline {
   storeId: Int
 }
 
-type ZiplineType {
+input ZiplineInput {
   storeId: Int
 }

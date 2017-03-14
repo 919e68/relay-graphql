@@ -1,12 +1,16 @@
 import React from 'react'
 import Relay from 'react-relay'
-import Companies from '../components/Companies'
+import Companies from '../components/companies'
 
 const CompaniesContainer = Relay.createContainer(Companies, {
   fragments: {
-    root: () => Relay.QL`
-      fragment on Root {
-        greetings
+    companies: () => Relay.QL`
+      fragment on Viewer {
+        companies {
+           _id
+          name
+          email
+        }
       }
     `
   }

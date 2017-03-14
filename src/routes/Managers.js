@@ -1,6 +1,6 @@
 import React from 'react'
 import Relay from 'react-relay'
-import Managers from '../components/Managers'
+import Managers from '../components/managers'
 
 const ManagersContainer = Relay.createContainer(Managers, {
   fragments: {

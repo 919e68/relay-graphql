@@ -9,7 +9,7 @@ import { CompanyType } from './company'
 import Company from '../../models/company'
 
 const DriverType = new GraphQLObjectType({
-  name: 'DriverType',
+  name: 'Driver',
   fields: {
     _id: {
       type: GraphQLID

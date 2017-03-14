@@ -1,7 +1,7 @@
 import { GraphQLString, GraphQLObjectType } from 'graphql'
 
 const UserErrorType = new GraphQLObjectType({
-  name: 'UserErrorType',
+  name: 'UserError',
   fields: {
     key: {
       type: GraphQLString

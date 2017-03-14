@@ -18,7 +18,9 @@ class Companies extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    let companies = this.props.companies.companies
+    console.log(companies)
+
     return (
       <PanelContainer>
         <Panel>

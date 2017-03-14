@@ -18,7 +18,6 @@ class Stations extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <PanelContainer>
         <Panel>

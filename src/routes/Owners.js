@@ -1,6 +1,6 @@
 import React from 'react'
 import Relay from 'react-relay'
-import Owners from '../components/Owners'
+import Owners from '../components/owners'
 
 const OwnersContainer = Relay.createContainer(Owners, {
   fragments: {

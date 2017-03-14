@@ -6,7 +6,7 @@ import {
 } from 'graphql'
 
 const ManagerType = new GraphQLObjectType({
-  name: 'ManagerType',
+  name: 'Manager',
   fields: {
     _id: {
       type: GraphQLID

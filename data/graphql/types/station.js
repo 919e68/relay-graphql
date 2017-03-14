@@ -30,7 +30,7 @@ const ProductFields = {
 }
 
 const ProductType = new GraphQLObjectType({
-  name: 'ProductType',
+  name: 'Product',
   fields: ProductFields
 })
 
@@ -46,7 +46,7 @@ const ziplineFields = {
 }
 
 const ZiplineType = new GraphQLObjectType({
-  name: 'ZiplineType',
+  name: 'Zipline',
   fields: ziplineFields
 })
 
@@ -56,7 +56,7 @@ const ZiplineInput = new GraphQLInputObjectType({
 })
 
 const StationType = new GraphQLObjectType({
-  name: 'StationType',
+  name: 'Station',
   fields: {
     _id: {
       type: GraphQLID

@@ -6,7 +6,7 @@ import {
 } from 'graphql'
 
 const CompanyType = new GraphQLObjectType({
-  name: 'CompanyType',
+  name: 'Company',
   fields: {
     _id: {
       type: GraphQLID

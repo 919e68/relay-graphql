@@ -3,21 +3,22 @@ import Relay from 'react-relay'
 import classNames from 'classnames'
 import { IndexRoute, Route } from 'react-router'
 
-import App from './components/App'
+import App from './components/app'
 
-import Home from './routes/Home'
-import Companies from './routes/Companies'
-import Managers from './routes/Managers'
-import Drivers from './routes/Drivers'
-import Stations from './routes/Stations'
-import Owners from './routes/Owners'
+import Home from './routes/home'
+import Companies from './routes/companies'
+import Managers from './routes/managers'
+import Drivers from './routes/drivers'
+import Stations from './routes/stations'
+import Owners from './routes/owners'
 
-import RootQuery from './queries/Root'
+import RootQuery from './queries/root'
+import CompaniesQuery from './queries/companies'
 
 export default (
   <Route path='/' component={App}>
     <IndexRoute component={Home} queries={RootQuery} />
-    <Route path='/companies' component={Companies} queries={RootQuery} />
+    <Route path='/companies' component={Companies} queries={CompaniesQuery} />
     <Route path='/managers' component={Managers} queries={RootQuery} />
     <Route path='/drivers' component={Drivers} queries={RootQuery} />
     <Route path='/stations' component={Stations} queries={RootQuery} />

@@ -12,7 +12,7 @@ import { StationType } from './station'
 import Station from '../../models/station'
 
 const OwnerType = new GraphQLObjectType({
-  name: 'OwnerType',
+  name: 'Owner',
   fields: {
     _id: {
       type: GraphQLID

@@ -1,6 +1,6 @@
 import React from 'react'
 import Relay from 'react-relay'
-import Home from '../components/Home'
+import Home from '../components/home'
 
 const HomeContainer = Relay.createContainer(Home, {
   fragments: {

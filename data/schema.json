@@ -43,7 +43,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "CompanyType",
+                "name": "Company",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -66,7 +66,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "ManagerType",
+                "name": "Manager",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -89,7 +89,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "DriverType",
+                "name": "Driver",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -112,7 +112,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "OwnerType",
+                "name": "Owner",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -135,7 +135,7 @@
               ],
               "type": {
                 "kind": "OBJECT",
-                "name": "StationType",
+                "name": "Station",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -204,7 +204,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "CompanyType",
+          "name": "Company",
           "description": null,
           "fields": [
             {
@@ -263,7 +263,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "ManagerType",
+          "name": "Manager",
           "description": null,
           "fields": [
             {
@@ -358,7 +358,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "DriverType",
+          "name": "Driver",
           "description": null,
           "fields": [
             {
@@ -427,7 +427,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "CompanyType",
+                "name": "Company",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -441,7 +441,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "OwnerType",
+          "name": "Owner",
           "description": null,
           "fields": [
             {
@@ -525,7 +525,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "StationType",
+                  "name": "Station",
                   "ofType": null
                 }
               },
@@ -550,7 +550,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "StationType",
+          "name": "Station",
           "description": null,
           "fields": [
             {
@@ -598,7 +598,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "ProductType",
+                  "name": "Product",
                   "ofType": null
                 }
               },
@@ -707,7 +707,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ZiplineType",
+                "name": "Zipline",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -749,7 +749,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "ProductType",
+          "name": "Product",
           "description": null,
           "fields": [
             {
@@ -818,7 +818,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "ZiplineType",
+          "name": "Zipline",
           "description": null,
           "fields": [
             {
@@ -875,7 +875,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "CompanyType",
+                  "name": "Company",
                   "ofType": null
                 }
               },
@@ -891,7 +891,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "ManagerType",
+                  "name": "Manager",
                   "ofType": null
                 }
               },
@@ -907,7 +907,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "DriverType",
+                  "name": "Driver",
                   "ofType": null
                 }
               },
@@ -923,7 +923,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "OwnerType",
+                  "name": "Owner",
                   "ofType": null
                 }
               },
@@ -939,7 +939,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "StationType",
+                  "name": "Station",
                   "ofType": null
                 }
               },
@@ -1380,7 +1380,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "CompanyType",
+                "name": "Company",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1395,7 +1395,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1410,7 +1410,7 @@
         },
         {
           "kind": "OBJECT",
-          "name": "UserErrorType",
+          "name": "UserError",
           "description": null,
           "fields": [
             {
@@ -1454,7 +1454,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "CompanyType",
+                "name": "Company",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1469,7 +1469,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1493,7 +1493,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "CompanyType",
+                "name": "Company",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1508,7 +1508,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1623,7 +1623,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ManagerType",
+                "name": "Manager",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1638,7 +1638,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1662,7 +1662,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ManagerType",
+                "name": "Manager",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1677,7 +1677,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1701,7 +1701,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "ManagerType",
+                "name": "Manager",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1716,7 +1716,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1821,7 +1821,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "DriverType",
+                "name": "Driver",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1836,7 +1836,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1860,7 +1860,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "DriverType",
+                "name": "Driver",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1875,7 +1875,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -1899,7 +1899,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "DriverType",
+                "name": "Driver",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -1914,7 +1914,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -2179,7 +2179,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "StationType",
+                "name": "Station",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2194,7 +2194,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -2218,7 +2218,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "StationType",
+                "name": "Station",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2233,7 +2233,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -2257,7 +2257,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "StationType",
+                "name": "Station",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2272,7 +2272,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -2377,7 +2377,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "OwnerType",
+                "name": "Owner",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2392,7 +2392,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -2416,7 +2416,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "OwnerType",
+                "name": "Owner",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2431,7 +2431,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
@@ -2455,7 +2455,7 @@
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "OwnerType",
+                "name": "Owner",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -2470,7 +2470,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "UserErrorType",
+                  "name": "UserError",
                   "ofType": null
                 }
               },
