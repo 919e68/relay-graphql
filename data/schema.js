@@ -1,6 +1,6 @@
 import config from '../graphql.json'
 import mongoose from 'mongoose'
-import { GraphQLSchema, GraphQLObjectType } from 'graphql'
+import { GraphQLString, GraphQLList, GraphQLSchema, GraphQLObjectType } from 'graphql'
 
 import Root from './graphql/root'
 import Company from './graphql/company'
@@ -11,24 +11,46 @@ import Station from './graphql/station'
 
 mongoose.connect(config.mongo)
 
+let ViewerType = new GraphQLObjectType({
+  name: 'Viewer',
+  fields: {
+    companies: Company.Queries.companies,
+    managers: Manager.Queries.managers,
+    drivers: Driver.Queries.drivers,
+    owners: Owner.Queries.owners,
+    stations: Station.Queries.stations,
+  }
+})
+
 const Queries = new GraphQLObjectType({
   name: 'Query',
   fields: {
     root: Root.Queries.root,
     company: Company.Queries.company,
-    companies: Company.Queries.companies,
-    
     manager: Manager.Queries.manager,
-    managers: Manager.Queries.managers,
-
     driver: Driver.Queries.driver,
-    drivers: Driver.Queries.drivers,
-
     owner: Owner.Queries.owner,
-    owners: Owner.Queries.owners,
-
     station: Station.Queries.station,
-    stations: Station.Queries.stations,
+
+    viewer: {
+      type: new GraphQLObjectType({
+        name: 'Viewer',
+        fields: {
+          name: {
+            type: GraphQLString
+          },
+          companies: Company.Queries.companies,
+          managers: Manager.Queries.managers,
+          drivers: Driver.Queries.drivers,
+          owners: Owner.Queries.owners,
+          stations: Station.Queries.stations,
+
+        }
+      }),
+      resolve: () => {
+        return { name: 'Viewer' }
+      }
+    }
   }
 })
 

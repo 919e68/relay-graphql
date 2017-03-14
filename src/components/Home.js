@@ -18,7 +18,6 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log(this.props.root)
     return (
       <PanelContainer>
         <Panel>
@@ -26,7 +25,7 @@ class Home extends React.Component {
             <Grid>
               <Row>
                 <Col xs={12}>
-                  <h3>Hello MotherFuckers</h3>
+                  <h3>{this.props.root.greetings}</h3>
                 </Col>
               </Row>
             </Grid>

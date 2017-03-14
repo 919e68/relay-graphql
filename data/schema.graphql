@@ -163,15 +163,11 @@ type ProductType {
 type Query {
   root: Root
   company(_id: ID): CompanyType
-  companies: [CompanyType]
   manager(_id: ID): ManagerType
-  managers: [ManagerType]
   driver(_id: ID): DriverType
-  drivers: [DriverType]
   owner(_id: ID): OwnerType
-  owners: [OwnerType]
   station(_id: ID): StationType
-  stations: [StationType]
+  viewer: Viewer
 }
 
 type Root {
@@ -242,6 +238,15 @@ type UpdateStationResponse {
 type UserErrorType {
   key: String
   msg: String
+}
+
+type Viewer {
+  name: String
+  companies: [CompanyType]
+  managers: [ManagerType]
+  drivers: [DriverType]
+  owners: [OwnerType]
+  stations: [StationType]
 }
 
 input ZiplineInput {

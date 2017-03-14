@@ -14,5 +14,4 @@ const RootType = new GraphQLObjectType({
   }
 })
 
-
 export { RootType }

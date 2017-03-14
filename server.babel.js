@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 
 setNetworkLayer(GraphQLEndpoint);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 let app = express();
 app.use(compression());

@@ -1,9 +1,9 @@
 {
   "mongo": "mongodb://127.0.0.1/exit7c",
   "development": {
-    "endpoint": "http://localhost:8080/graphql"
+    "endpoint": "http://localhost:3000/graphql"
   },
   "production": {
-    "endpoint": "http://localhost:8080/graphql"
+    "endpoint": "http://localhost:3000/graphql"
   }
 }
